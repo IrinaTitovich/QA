@@ -25,7 +25,6 @@ export class SidenavComponent implements AfterViewChecked {
     });
   }
   ngAfterViewChecked(): void {
-
     this.toggle.drawer=this.drawer
   }
 

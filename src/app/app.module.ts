@@ -11,6 +11,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { AskQuestionComponent } from './components/ask-question/ask-question.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

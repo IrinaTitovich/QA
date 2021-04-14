@@ -1,11 +1,11 @@
 <form class="ask-question-form">
     <mat-form-field class="ask-question-form__inputs">
         <mat-label>Title</mat-label>
-        <input matInput placeholder="Title" value="">
+        <input #title matInput placeholder="Title" value="" (input)='addQuestionTitle(title.value)'>
     </mat-form-field>
     <br>
     <mat-form-field class="ask-question-form__inputs">
         <mat-label>Ask your question...</mat-label>
-        <textarea matInput placeholder="Your question"></textarea>
+        <textarea #question matInput placeholder="Your question" (input)='addQuestionContent(title.value)'></textarea>
     </mat-form-field>
 </form>
