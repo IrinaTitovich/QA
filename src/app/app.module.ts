@@ -12,6 +12,8 @@ import { AskQuestionComponent } from './components/ask-question/ask-question.com
 import { DialogComponent } from './components/dialog/dialog.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { QuestionsContainerComponent } from './components/questions-container/questions-container.component';
+import { SearchTextPipe } from './pipes/search-text.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     QuestionComponent,
     AskQuestionComponent,
     DialogComponent,
-    SidenavComponent
+    SidenavComponent,
+    QuestionsContainerComponent,
+    SearchTextPipe
   ],
   imports: [
     SharedModule,

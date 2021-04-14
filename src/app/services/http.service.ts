@@ -20,4 +20,8 @@ export class HttpService {
   addNewQuestion(question:string){
     return this.httpClient.post<IQuestion>(this.database.url, question,{headers:{'Content-Type':'application/json'}} )
   }
+
+  getQuestions(){
+    return this.httpClient.get<IQuestion[]>(this.database.url, {headers:{'Content-Type':'application/json'}} )
+  }
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { first } from 'rxjs/operators';
 import { IDatabase, IQuestion } from '../interfaces/question';
 import { HttpService } from './http.service';
 
@@ -14,8 +15,6 @@ export class AddQuestionService {
     rate:null,
   }
 
-
-
   constructor(public httpService:HttpService) { }
 
   addNewQuestion():void{
@@ -25,7 +24,7 @@ export class AddQuestionService {
     if (this.question.content.length === 0){
       return
     }
-    this.httpService.addNewQuestion(JSON.stringify(this.question)).subscribe(resp=>console.log(resp))
+    this.httpService.addNewQuestion(JSON.stringify(this.question)).pipe(first()).subscribe(resp=>console.log(resp))
   }
 
 }
