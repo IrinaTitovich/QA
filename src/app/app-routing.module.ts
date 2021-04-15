@@ -5,7 +5,7 @@ import { LogInComponent } from './content/log-in/log-in.component';
 import { QuestionsContentComponent } from './content/questions-content/questions-content.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
+  {path:'', component:HomeComponent,},
   {path:'questions', component:QuestionsContentComponent},
   {path:'logIn', component:LogInComponent}
 ];

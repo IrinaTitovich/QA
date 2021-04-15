@@ -7,7 +7,7 @@ import { ILogIn } from '../interfaces/log-in';
 })
 export class LogInService {
   public logIn:ILogIn = {
-    logIn:false,
+    logIn:true,
     email:'',
     password:''
   }

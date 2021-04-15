@@ -1,7 +1,7 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
         <ul>
-            <li><a routerLinkActive='active' [routerLink]='["/"]' mat-flat-button>Home</a></li>
+            <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active' [routerLink]='["/"]' mat-flat-button>Home</a></li>
             <li><a routerLinkActive='active' [routerLink]="['/questions']" mat-flat-button>Questions</a></li>
             <li><a routerLinkActive='active' [routerLink]="['/logIn']" mat-flat-button>Log-in</a></li>
         </ul>
