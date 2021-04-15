@@ -1,1 +1,4 @@
 $height-header: 10vh;
+$height-screen:100vh;
+$height-content:82vh;
+$height-side-nav-header: $height-screen - $height-content - $height-header;

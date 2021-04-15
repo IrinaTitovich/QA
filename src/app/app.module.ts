@@ -8,7 +8,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared/shared.module';
 import { SearchComponent } from './components/search/search.component';
 import { QuestionComponent } from './components/question/question.component';
-import { AskQuestionComponent } from './components/ask-question/ask-question.component';
+import { AskQuestionComponent } from './components/question/ask-question/ask-question.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';

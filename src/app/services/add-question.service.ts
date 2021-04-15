@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first } from 'rxjs/operators';
-import { IDatabase, IQuestion } from '../interfaces/question';
+import { IQuestion } from '../interfaces/question';
 import { GetQuestionsService } from './get-questions.service';
 import { HttpService } from './http.service';
 

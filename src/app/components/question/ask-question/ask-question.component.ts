@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppRoutingModule } from 'src/app/app-routing.module';
-import { IQuestion } from 'src/app/interfaces/question';
 import { AddQuestionService } from 'src/app/services/add-question.service';
 
 @Component({

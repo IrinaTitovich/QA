@@ -1,14 +1,14 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
-        <ul>
-            <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active' [routerLink]='["/"]' mat-flat-button>Home</a></li>
-            <li><a routerLinkActive='active' [routerLink]="['/questions']" mat-flat-button>Questions</a></li>
-            <li><a routerLinkActive='active' [routerLink]="['/logIn']" mat-flat-button>Log-in</a></li>
+    <mat-drawer #drawer class="side-nav" mode="side">
+        <ul class="side-nav__navigation">
+            <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive='active' [routerLink]='["/"]' mat-flat-button class="side-nav__link">Home</a></li>
+            <li><a routerLinkActive='active' [routerLink]="['/questions']" mat-flat-button class="side-nav__link">Questions</a></li>
+            <li><a routerLinkActive='active' [routerLink]="['/logIn']" mat-flat-button class="side-nav__link">Log-in</a></li>
         </ul>
 
     </mat-drawer>
 
-    <div class="sidenav-content">
+    <div class="side-nav__content">
         <div class="side-nav__header" *ngIf='logInService.logIn.logIn;else block'>
             <app-search></app-search>
             <button mat-raised-button color="accent" (click)=' openDialog() '>Ask a question</button>

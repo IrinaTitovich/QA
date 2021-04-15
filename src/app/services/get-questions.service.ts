@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IQuestion } from '../interfaces/question';
 import { HttpService } from './http.service';
-import { pluck,map, first } from 'rxjs/operators';
+import { map, first } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

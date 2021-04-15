@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AskQuestionComponent } from './components/ask-question/ask-question.component';
+import { AskQuestionComponent } from './components/question/ask-question/ask-question.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 
 @Component({

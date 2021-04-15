@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { IDatabase, IQuestion } from '../interfaces/question';
-import { AddQuestionService } from './add-question.service';
+
 
 @Injectable({
   providedIn: 'root'
