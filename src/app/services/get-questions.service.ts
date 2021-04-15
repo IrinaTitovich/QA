@@ -18,7 +18,7 @@ export class GetQuestionsService {
     this.httpService.getQuestions().pipe(
       first(),
       map(item=>Object.values(item))
-    ).subscribe(resp=>this.questions= resp)
+    ).subscribe(resp=>this.questions = resp)
   }
 
 

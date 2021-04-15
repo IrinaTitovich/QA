@@ -14,6 +14,10 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionsContainerComponent } from './components/questions-container/questions-container.component';
 import { SearchTextPipe } from './pipes/search-text.pipe';
+import { QuestionsContentComponent } from './content/questions-content/questions-content.component';
+import { HomeComponent } from './content/home/home.component';
+import { LogInComponent } from './content/log-in/log-in.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,18 @@ import { SearchTextPipe } from './pipes/search-text.pipe';
     DialogComponent,
     SidenavComponent,
     QuestionsContainerComponent,
-    SearchTextPipe
+    SearchTextPipe,
+    QuestionsContentComponent,
+    HomeComponent,
+    LogInComponent
   ],
   imports: [
     SharedModule,
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    // RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

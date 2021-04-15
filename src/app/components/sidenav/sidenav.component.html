@@ -1,19 +1,22 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
-        <p>Auto-resizing sidenav</p>
-        <p *ngIf="toggle.showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-        <button (click)="toggle.showFiller = !toggle.showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
+        <ul>
+            <li><a routerLinkActive='active' [routerLink]='["/"]' mat-flat-button>Home</a></li>
+            <li><a routerLinkActive='active' [routerLink]="['/questions']" mat-flat-button>Questions</a></li>
+            <li><a routerLinkActive='active' [routerLink]="['/logIn']" mat-flat-button>Log-in</a></li>
+        </ul>
+
     </mat-drawer>
 
     <div class="sidenav-content">
-        <div class="side-nav__header">
+        <div class="side-nav__header" *ngIf='logInService.logIn.logIn;else block'>
             <app-search></app-search>
-            <button mat-raised-button color="accent" (click)='openDialog()'>Ask a question</button>
+            <button mat-raised-button color="accent" (click)=' openDialog() '>Ask a question</button>
         </div>
-
-        <app-questions-container></app-questions-container>
+        <ng-content></ng-content>
     </div>
 
+    <ng-template #block>
+        <div class="side-nav__header"> </div>
+    </ng-template>
 </mat-drawer-container>
