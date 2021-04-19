@@ -1,0 +1,24 @@
+<form class="form-log-in" #f='ngForm'>
+    <div class="form-log-in__container">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="" required name="email" ngModel>
+            <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}} </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+
+            <input matInput [type]="hide ? 'password ' : 'text '" name="password" ngModel required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password '" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off ' : 'visibility '}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}} </mat-error>
+        </mat-form-field>
+        <div class="form-log-in__buttons">
+            <button [disabled]='f.invalid ' class="form-log-in__button" type="submit" mat-raised-button>Log In</button>
+            <a class="form-log-in__button" color="primary" type="submit" mat-raised-button>Sign Up</a>
+        </div>
+    </div>
+    <pre>!{{f.value|json}}</pre>
+</form>

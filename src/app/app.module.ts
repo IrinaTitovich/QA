@@ -17,7 +17,9 @@ import { SearchTextPipe } from './pipes/search-text.pipe';
 import { QuestionsContentComponent } from './content/questions-content/questions-content.component';
 import { HomeComponent } from './content/home/home.component';
 import { LogInComponent } from './content/log-in/log-in.component';
-import { RouterModule } from '@angular/router';
+import { FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import { FormLogInComponent } from './components/form-log-in/form-log-in.component';
+import { FormCreateAccountComponent } from './components/form-create-account/form-create-account.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { RouterModule } from '@angular/router';
     SearchTextPipe,
     QuestionsContentComponent,
     HomeComponent,
-    LogInComponent
+    LogInComponent,
+    FormLogInComponent,
+    FormCreateAccountComponent,
+
   ],
   imports: [
     SharedModule,
@@ -40,6 +45,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
     // RouterModule
   ],
   providers: [],

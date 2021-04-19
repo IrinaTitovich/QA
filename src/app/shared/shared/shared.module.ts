@@ -7,7 +7,8 @@ import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatCardModule} from '@angular/material/card';
 import { MatDialogModule} from '@angular/material/dialog';
-import {  MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { FormControl, FormsModule, Validators} from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,9 @@ import {  MatSidenavModule} from '@angular/material/sidenav';
     MatFormFieldModule,
     MatCardModule,
     MatDialogModule,
-    MatSidenavModule
+    MatSidenavModule,
+
+    // FormsModule
   ]
 })
 
